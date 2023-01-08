@@ -45,6 +45,33 @@ canvas{
 img{
     display: none;
 }
-a{
+#cite{
     margin: 20px;
 }
+
+#link{
+    margin: 20px;
+    margin-bottom: 0px;
+    background-color: white;
+    z-index: 0;
+    width: 100px;
+    height: 30px;
+    border: 1px rgb(70, 70, 70) solid;
+    border:transparent;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #cite{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  a:link, a:visited{
+    color: rgb(98, 98, 98);
+  }
+  a:hover, a:active{
+    color: black;
+  }
