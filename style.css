@@ -1,0 +1,50 @@
+div{
+  border: transparent;
+  background-color: navy;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: 50%;
+  top: 50%;
+  margin-top: -1em;
+  border-radius: 4em;
+  animation-name: grow, fade;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 0s, 2s;
+  animation-direction: alternate;
+}
+
+@keyframes grow{
+  0% {
+    transform: scale(.1);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
+@keyframes grow2{
+  0% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes fade{
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 15%;
+  }
+}
+@keyframes fade2{
+  0% {
+    opacity: 15%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
