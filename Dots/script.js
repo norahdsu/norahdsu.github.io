@@ -27,7 +27,7 @@ window.onload = function(){
   }
 
   for(let i=0;i<bubbles.length;i++){
-    bubbles[i].id = "still";
+    bubbles[i].id = "bubble";
     bubbles[i].style.left = String(rndm(100))+'%';
     bubbles[i].style.top = String(rndm(100))+'%';
     let randnum = String((Math.random()*3)+2)+'em';
@@ -38,22 +38,7 @@ window.onload = function(){
 
     bubbles[i].style.backgroundColor = clr();    
     }
-    //setInterval(ar1, 100);
   }
-
-/*
-function ar1(){
-  let rndn = rndm(bubbles.length);
-  bubbles[rndn].id = "moving";
-  setTimeout(ar2, 3000, rndn);
-}
-
-function ar2(rndn){
-  bubbles[rndn].style.left = String(rndm(100))+'%';
-  bubbles[rndn].style.top = String(rndm(100))+'%';
-  bubbles.id = "still";
-}
-*/
 
 function _rgba(r, g, b, a){
   return ('rgba('+r+','+g+','+b+','+a+')');

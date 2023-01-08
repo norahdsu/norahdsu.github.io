@@ -1,4 +1,29 @@
-div{
+#link{
+  background-color: white;
+  z-index: 0;
+  width: 100px;
+  height: 30px;
+  border: 1px rgb(70, 70, 70) solid;
+  border:transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+a:link, a:visited{
+  color: rgb(98, 98, 98);
+}
+a:hover, a:active{
+  color: black;
+}
+
+#bubble{
   border: transparent;
   background-color: navy;
   position: absolute;
@@ -13,6 +38,7 @@ div{
   animation-duration: 3s;
   animation-delay: 0s, 2s;
   animation-direction: alternate;
+  z-index: -1;
 }
 
 @keyframes grow{
