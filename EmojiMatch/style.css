@@ -1,0 +1,50 @@
+body{
+    background-color: aliceblue;
+}
+#d1{
+    border: 5px black solid;
+    margin: 20px;
+    display: inline-block;
+    background-color: antiquewhite;
+}
+#d2{
+    border: 3px blue solid;
+    margin: 2px;
+    display: block;
+    background-color: aliceblue;
+}
+h1{
+    display: inline-block;
+    margin: auto;
+    width: 25%;
+    height: 40px;
+    text-align: center;
+}
+button{
+    display: inline-block;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 12%;
+    height: 40px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    border-radius: 4px;
+    border-color: gray;
+    border-width: 4px;
+}
+canvas{
+    margin: 10px;
+    background-color: white;
+}
+#cvs{
+    border: 5px black solid;
+    margin: 2px;
+    background-color: white;
+}
+img{
+    display: none;
+}
+a{
+    margin: 20px;
+}
