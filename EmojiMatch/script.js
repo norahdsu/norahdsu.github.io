@@ -66,14 +66,39 @@ function makeDeck(num){
         let y2;
         
         if(i<8){
-            x = (cardWidth + gapX) * i;
-            y1 = 0;
-            y2 = cardHeight + gapY;
+            if(i<4){
+                x = (cardWidth + gapX) * i;
+                y1 = 0;
+                y2 = cardHeight + gapY;
+            } 
+            else{
+                x = (cardWidth + gapX) * (i-4);
+                y1 = (cardHeight + gapY)*2;
+                y2 = (cardHeight + gapY)*3;
+            }
         }
         else{
-            x = (cardWidth + gapX) * (i-8);
-            y1 = (cardHeight + gapY)*2;
-            y2 = (cardHeight + gapY)*3;
+
+            if(i<10){
+                x = (cardWidth + gapX) * (i-4);
+                y1 = 0;
+                y2 = cardHeight + gapY;
+            } 
+            else if(i>9 && i<12){
+                x = (cardWidth + gapX) * (i-6);
+                y1 = (cardHeight + gapY)*2;
+                y2 = (cardHeight + gapY)*3;
+            }
+            else if(i>11 && i<14){
+                x = (cardWidth + gapX) * (i-6);
+                y1 = 0;
+                y2 = (cardHeight + gapY);
+            }
+            else if(i>13 && i<16){
+                x = (cardWidth + gapX) * (i-8);
+                y1 = (cardHeight + gapY)*2;
+                y2 = (cardHeight + gapY)*3;
+            }
         }
 
         card = new Card (x,y1, img, i);
@@ -81,7 +106,6 @@ function makeDeck(num){
         card = new Card (x,y2, img, i);
         deck.push(card);
     }
-    
 }
 
 function shuffle(){
