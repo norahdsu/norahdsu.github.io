@@ -26,9 +26,6 @@ function restart(chosen){
   for(let i=0;i<buttons.length;i++)
     buttons[i].style.visibility = 'visible';
 
-
-  
-
   errorCount = 0;
   correctCount = 0;
   guessedWord = "";
