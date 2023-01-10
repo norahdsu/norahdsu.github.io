@@ -17,16 +17,12 @@ let colors = [
 
 window.onload = function(){
   let num = (window.innerWidth*window.innerHeight)/10000;
-  num = num>500 ? 200 : num;
+  num = num>300 ? 300 : num;
 
   for(let i=0; i<num; i++){
     bubbles.push(document.createElement("div"));
-    bubbles[i].id = "c"+i;
-    bubbles[i].class = "bubbles";
     document.body.appendChild(bubbles[i]);
-  }
 
-  for(let i=0;i<bubbles.length;i++){
     bubbles[i].id = "bubble";
     bubbles[i].style.left = String(rndm(100))+'%';
     bubbles[i].style.top = String(rndm(100))+'%';
