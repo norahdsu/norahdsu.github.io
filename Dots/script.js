@@ -1,21 +1,13 @@
 let bubbles = []
-/*
-let colors = [
-  'rgba(72,61,139,.5)',
-  'rgba(65,105,225,.5)',
-  'rgba(0,0,255,.5)',
-  'rgba(65,105,225,.5)',
-  'rgba(0,0,205,.5)',
-  'rgba(0,0,139,.5)',
-  'rgba(0,0,128,.5)',
-  'rgba(25,25,112,.5)',
-  'rgba(100,149,237,.5)',
-  'rgba(70,130,180,.5)'
-   ]
-   */
-
 
 window.onload = function(){
+  restart(4)
+}
+
+function restart(colors){
+  for(let i=0; i<bubbles.length; i++){
+    bubbles[i].remove();
+  }
   let num = (window.innerWidth*window.innerHeight)/10000;
   num = num>300 ? 300 : num;
 
@@ -31,8 +23,21 @@ window.onload = function(){
     bubbles[i].style.width = randnum;
     bubbles[i].style['animation-duration'] = String((Math.random()*3)+1)+'s, '+String((Math.random()*3)+2)+'s';
     bubbles[i].style['animation-name'] = (rndm(3)>0 ? "grow, " : "grow2, ") + (rndm(2)>0 ? 'fade' : "fade2");
-
-    bubbles[i].style.backgroundColor = clr();    
+    
+    switch(colors){
+      case 1:
+        bubbles[i].style.backgroundColor = clr(0,0,140,0,150,100, .5);   
+        break; 
+      case 2:
+        bubbles[i].style.backgroundColor = clr(255,20,15,0,15,0, .8);
+        break;    
+      case 3:
+        bubbles[i].style.backgroundColor = clr(30,200,30,170,0,135, .8);
+        break;
+      case 4:
+        bubbles[i].style.backgroundColor = clr(255,0,255,0,255,0, Math.random());
+        break;
+  }
     }
   }
 
@@ -42,7 +47,7 @@ function _rgba(r, g, b, a){
 function rndm(max){
   return (Math.floor(Math.random()*max));
 }
-function clr(){
-  let c = _rgba(rndm(50),rndm(140), (rndm(150)+100), 0.5);
+function clr(r,ra,g,ga,b,ba, a){
+  let c = _rgba(rndm(r)+ra,rndm(g)+ga, (rndm(b)+ba), a);
   return c;
 }

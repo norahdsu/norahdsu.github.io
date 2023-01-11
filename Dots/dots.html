@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-    <div id="link"><a href="https://norahdsu.github.io/">Main Page</a></div>
+    <div id="controlbox">
+        <div id="link"><a href="https://norahdsu.github.io/">Main Page</a></div>
+        <div id="dropdown">
+            <button id="dropbtn">Color Palette</button>
+            <div id="dropdown-content">
+                <button onclick = "restart(1)" class="colorbuttons">Water</button>
+                <button onclick = "restart(2)" class="colorbuttons">Reds</button>
+                <button onclick = "restart(3)" class="colorbuttons">Sepia</button>
+                <button onclick = "restart(4)" class="colorbuttons">Everything</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
