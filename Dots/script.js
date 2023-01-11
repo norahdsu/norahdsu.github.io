@@ -1,7 +1,7 @@
 let bubbles = []
 
 window.onload = function(){
-  restart(4)
+  restart(1)
 }
 
 function restart(colors){
